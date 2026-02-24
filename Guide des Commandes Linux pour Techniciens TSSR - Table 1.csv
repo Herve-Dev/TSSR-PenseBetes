@@ -1,0 +1,33 @@
+Commande,Exemple d'Utilisation,Description,Résultat Attendu (Inféré),Catégorie
+ip a,ip a,Afficher les adresses IP et les interfaces réseau,Détails des interfaces comme eth0 avec l'adresse 192.168.1.10,Réseau
+ip route,ip route,Afficher la table de routage IP,Passerelle par défaut (ex: default via 192.168.1.1),Réseau
+ss -tulnp,ss -tulnp,Afficher les ports ouverts et les processus associés,"Liste des services en écoute, par exemple le port 80 pour nginx",Réseau
+ping 8.8.8.8,ping 8.8.8.8,Tester la connectivité réseau vers une adresse,Temps de réponse en ms montrant que l'hôte est joignable,Réseau
+traceroute google.com,traceroute google.com,Suivre le chemin des paquets vers un hôte,Liste des routeurs intermédiaires traversés,Réseau
+nslookup mon-site.com,nslookup google.com,Interroger les serveurs DNS pour la résolution de nom,Adresse IP correspondant au nom de domaine,Réseau
+systemctl status nom,systemctl status apache2,Vérifier l'état actuel d'un service,Indication 'active (running)' ou 'inactive/dead',Services
+systemctl start nom,systemctl start nginx,Démarrer un service spécifique,Lancement du service sans message d'erreur,Services
+systemctl stop nom,systemctl stop mysql,Arrêter un service en cours d'exécution,Arrêt immédiat du processus de service,Services
+systemctl enable nom,systemctl enable ssh,Activer le lancement automatique d'un service au démarrage,Création de liens symboliques pour l'auto-boot,Services
+systemctl list-units,systemctl list-units,Lister tous les services et unités chargés,Tableau récapitulatif de toutes les unités système,Services
+df -h,df -h,Afficher l'utilisation de l'espace disque en format lisible,Pourcentages d'occupation des partitions (ex: 80% utilisé),Système
+free -h,free -h,Afficher l'utilisation de la mémoire vive (RAM),Quantité de RAM libre et utilisée (ex: 2Go libre),Système
+top,top,Afficher les processus en temps réel et l'utilisation CPU,Tableau dynamique des processus les plus gourmands,Système
+hostnamectl,hostnamectl,Afficher ou modifier le nom d'hôte et les infos machine,"Nom de la machine, OS, et version du noyau",Système
+useradd -m user,useradd -m tssr_admin,Créer un nouvel utilisateur avec son répertoire personnel,Création de l'utilisateur et du dossier /home/tssr_admin,Utilisateurs
+passwd user,passwd toto,Changer le mot de passe d'un utilisateur,Mise à jour réussie du mot de passe,Utilisateurs
+usermod -aG sudo user,usermod -aG sudo tssr,Ajouter un utilisateur au groupe des administrateurs (sudo),L'utilisateur obtient des droits de super-utilisateur,Utilisateurs
+chmod 755 fichier,chmod 755 script.sh,Attribuer des droits rwx pour le proprio et rx pour les autres,Droits de type drwxr-xr-x,Permissions
+chmod 644 fichier,chmod 644 config.txt,Attribuer des droits rw pour le proprio et r pour les autres,Droits de type -rw-r--r--,Permissions
+chmod +x script.sh,chmod +x install.sh,Rendre un fichier exécutable,Le fichier peut désormais être lancé comme un programme,Permissions
+chown user:group fichier,chown toto:www-data site.html,Changer le propriétaire et le groupe d'un fichier,Propriété transférée à l'utilisateur et au groupe spécifiés,Permissions
+chgrp groupe dossier,chgrp admins /data,Changer uniquement le groupe d'un dossier,Le dossier appartient désormais au groupe désigné,Permissions
+fdisk -l,fdisk -l,Lister les partitions et les disques disponibles,"Liste détaillée des périphériques de stockage (sda, sdb...)",Disques
+fdisk /dev/sdb,fdisk /dev/sdb,Ouvrir l'outil de partitionnement pour un disque,Interface interactive pour créer ou supprimer des partitions,Disques
+mkfs.ext4 /dev/sdb1,mkfs.ext4 /dev/sdb1,Formater une partition avec le système de fichiers ext4,Initialisation du système de fichiers sur la partition,Disques
+mount /dev/sdb1 /mnt,mount /dev/sdb1 /mnt,Monter une partition dans l'arborescence,Le contenu de la partition est accessible dans /mnt,Disques
+df -hT,df -hT,Afficher l'espace disque avec le type de système de fichiers,"Colonnes indiquant ext4, xfs, etc. et l'espace libre",Disques
+umount /mnt,umount /mnt,Démonter un système de fichiers,Le point de montage est libéré et le disque sécurisé,Disques
+apt update,apt update,Mettre à jour la liste des paquets disponibles,Actualisation de l'index des dépôts distants,Paquets
+apt upgrade -y,apt upgrade -y,Installer les mises à jour des paquets installés,Mise à niveau automatique de tous les logiciels,Paquets
+apt install paquet,apt install nginx,Installer un nouveau logiciel,Téléchargement et installation du paquet nginx,Paquets
