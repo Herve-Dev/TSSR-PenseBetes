@@ -4,14 +4,15 @@ ipconfig,/all,"Affiche tous les détails réseau (MAC, DNS, DHCP, tous les adapt
 ipconfig,/release,Libère l’adresse IP obtenue par DHCP.,Configuration
 ipconfig,/renew,Redemande une adresse IP au serveur DHCP.,Configuration
 ipconfig,/flushdns,Vide le cache DNS (utile quand un site ne résout pas correctement).,DNS
-ping,adresse [ex ping 8.8.8.8] ,Teste si une adresse IP ou un nom répond (vérifie la connectivité de base).,Diagnostic
-ping -t, adresse [ex ping -t 8.8.8.8] ,Ping en continu jusqu’à Ctrl+C (utile pour surveiller une coupure).,Diagnostic
-tracert,adresse [tracert 8.8.8.8] ,"Affiche le chemin (routeurs/sauts) jusqu’à la destination, pour voir où ça bloque.",Diagnostic
-pathping,adresse [pathping 8.8.8.8] ,"Combinaison de ping + tracert, montre la latence et les pertes sur chaque saut.",Diagnostic
+ping,adresse [ex: ping 8.8.8.8] ,Teste si une adresse IP ou un nom répond (vérifie la connectivité de base).,Diagnostic
+ping -t, adresse [ex: ping -t 8.8.8.8] ,Ping en continu jusqu’à Ctrl+C (utile pour surveiller une coupure).,Diagnostic
+tracert,adresse [ex: tracert 8.8.8.8] ,"Affiche le chemin (routeurs/sauts) jusqu’à la destination, pour voir où ça bloque.",Diagnostic
+pathping,adresse [ex: pathping 8.8.8.8] ,"Combinaison de ping + tracert, montre la latence et les pertes sur chaque saut.",Diagnostic
 nslookup,nom_de_domaine,Interroge le DNS pour voir à quelle IP correspond un nom (diag DNS).,DNS
 netstat,-ano,Liste les connexions réseau et ports ouverts + PID des processus.,Diagnostic
 arp,-a,Affiche la table ARP (association IP ↔ MAC sur le réseau local).,Diagnostic
 route,print,"Affiche la table de routage de la machine (routes connues, passerelles).",Configuration
 hostname,Aucun,Affiche le nom de la machine.,Configuration
+
 
 
